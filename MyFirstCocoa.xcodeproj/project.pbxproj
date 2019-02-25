@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5CE7114D6CD6B7AA60263C49 /* Pods_MyFirstCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ABFD1A6A0CEB37707328DF /* Pods_MyFirstCocoa.framework */; };
 		72A8A59E2223C9AF00C183A6 /* MyFirstCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 72A8A59C2223C9AF00C183A6 /* MyFirstCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72A8A5C82223D05500C183A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A8A5C62223D05500C183A6 /* Main.storyboard */; };
+		72A8A5C92223D05500C183A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8A5C72223D05500C183A6 /* ViewController.swift */; };
+		72A8A5CB2223D1D600C183A6 /* StaticStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8A5CA2223D1D600C183A6 /* StaticStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +19,9 @@
 		72A8A5992223C9AF00C183A6 /* MyFirstCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFirstCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A8A59C2223C9AF00C183A6 /* MyFirstCocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFirstCocoa.h; sourceTree = "<group>"; };
 		72A8A59D2223C9AF00C183A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A8A5C62223D05500C183A6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		72A8A5C72223D05500C183A6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		72A8A5CA2223D1D600C183A6 /* StaticStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticStruct.swift; sourceTree = "<group>"; };
 		E3A6EEC700AA41B8722A7343 /* Pods-MyFirstCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFirstCocoa.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFirstCocoa/Pods-MyFirstCocoa.release.xcconfig"; sourceTree = "<group>"; };
 		E994F9515D3607A52D80EF09 /* Pods-MyFirstCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFirstCocoa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFirstCocoa/Pods-MyFirstCocoa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,8 +67,11 @@
 		72A8A59B2223C9AF00C183A6 /* MyFirstCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				72A8A5C62223D05500C183A6 /* Main.storyboard */,
+				72A8A5C72223D05500C183A6 /* ViewController.swift */,
 				72A8A59C2223C9AF00C183A6 /* MyFirstCocoa.h */,
 				72A8A59D2223C9AF00C183A6 /* Info.plist */,
+				72A8A5CA2223D1D600C183A6 /* StaticStruct.swift */,
 			);
 			path = MyFirstCocoa;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 				TargetAttributes = {
 					72A8A5982223C9AF00C183A6 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -145,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A8A5C82223D05500C183A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +191,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A8A5CB2223D1D600C183A6 /* StaticStruct.swift in Sources */,
+				72A8A5C92223D05500C183A6 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E994F9515D3607A52D80EF09 /* Pods-MyFirstCocoa.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -328,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.MyFirstCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3A6EEC700AA41B8722A7343 /* Pods-MyFirstCocoa.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
